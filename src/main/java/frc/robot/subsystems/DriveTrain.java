@@ -5,15 +5,16 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.Talon;
-import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
+import edu.wpi.first.wpilibj2.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.Constants;
 
 /**
  * Add your docs here.
  */
-public class Drivetrain extends Subsystem {
+public class Drivetrain implements Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -22,8 +23,8 @@ public class Drivetrain extends Subsystem {
   Talon rightFrontTalon = null;
   Talon rightBackTalon = null;
 
-  SpeedControllerGroup leftMotors = null;
-  SpeedControllerGroup rightMotors = null;
+  MotorControllerGroup leftMotors = null;
+  MotorControllerGroup rightMotors = null;
   DifferentialDrive differentialDrive = null;
 
   public Drivetrain() {
@@ -33,8 +34,8 @@ public class Drivetrain extends Subsystem {
     rightFrontTalon = new Talon(Constants.DRIVETRAIN_RIGHT_FRONT_TALON);
     rightBackTalon = new Talon(Constants.DRIVETRAIN_RIGHT_BACK_TALON);
 
-    leftMotors = new SpeedControllerGroup(leftFrontTalon, leftBackTalon);
-    rightMotors = new SpeedControllerGroup(rightFrontTalon, rightBackTalon);
+    leftMotors = new MotorControllerGroup(leftFrontTalon, leftBackTalon);
+    rightMotors = new MotorControllerGroup(rightFrontTalon, rightBackTalon);
     differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
   }
 
