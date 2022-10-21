@@ -2,8 +2,6 @@
 
 This is where all the code goes for the robot!
 
-test changes
-
-this is the real test change
+*Note: If your git says that this repo isn't found, point your local clone's origin to the updated repository url.
 
 # Guess what folks! Github is working! Yoooo
