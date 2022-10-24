@@ -1,10 +1,12 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.Constants;
+import edu.wpi.first.wpilibj.RobotBase;
+import frc.robot.RobotContainer;
 
-public class DriveArcade extends Command {
+public class DriveArcade extends CommandBase {
   public DriveArcade() {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(RobotContainer.m_drivetrain);
@@ -12,12 +14,12 @@ public class DriveArcade extends Command {
 
   // Called just before this Command runs the first time
   @Override
-  protected void initialize() {
+  public void initialize() {
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
-  protected void execute() {
+  public void execute() {
     double moveSpeed = -RobotContainer.driverController.getRawAxis(Constants.DRIVER_CONTROLLER_MOVE_AXIS);
     double rotateSpeed = RobotContainer.driverController.getRawAxis(Constants.DRIVER_CONTROLLER_ROTATE_AXIS);
 
@@ -26,13 +28,13 @@ public class DriveArcade extends Command {
 
   // Called once the command ends or is interrupted.
   @Override
-  protected void end(boolean interrupted) {
-    Robot.m_drivetrain.arcadeDrive(0, 0);
+  public void end(boolean interrupted) {
+    RobotContainer.m_drivetrain.arcadeDrive(0, 0);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
-  protected boolean isFinished() {
+  public boolean isFinished() {
     return false;
   }
 }

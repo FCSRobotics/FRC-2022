@@ -1,11 +1,7 @@
-HIII
+# FRC-2022 Repository for FCS Robotics
 
-THIS IS A README
+This is where all the code goes for the robot!
 
-R O B O T
+*Note: If your git says that this repo isn't found, point your local clone's origin to the updated repository url.
 
-UPDATE README TEST
-
-again
-
-hello!!!!!!!!!! l;aksjd;flkasj;flkasdjf
+# Guess what folks! Github is working! Yoooo
