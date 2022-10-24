@@ -20,13 +20,8 @@ import frc.robot.commands.DriveArcade;
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
-<<<<<<< HEAD
   // The robot's subsystems and commands are defined here...
   public Joystick driverController = new Joystick(Constants.DRIVER_CONTROLLER);
-=======
-  // The robot's subsystems and commands are defined here... test
-  public static Joystick driverController = new Joystick(Constants.DRIVER_CONTROLLER);
->>>>>>> 0de148f90c97b208ce7a9e4d420f734e7c5feb34
   public static final Drivetrain m_drivetrain = new Drivetrain();
   
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
